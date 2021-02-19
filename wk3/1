@@ -16,14 +16,14 @@ for single_arg in sys.argv:
         break
     if single_arg[0:2] == '--':
         double_dash_count += 1
-    elif single_arg[0:1] == '-':
+    if single_arg[0:1] == '-':
         single_dash_count += 1
     if '=' in single_arg:
         equals_count += 1
 
 print('total params: ' + str(total_count)) 
-print('with \'-\'    : ' + str(single_dash_count)) 
-print('with \'--\'   : ' + str(double_dash_count)) 
+print('with '-'    : ' + str(single_count)) 
+print('with '--'   : ' + str(double_count)) 
 print('with \'=\'    : ' + str(equals_count)) 
 
 ############################### TASK #############################################
